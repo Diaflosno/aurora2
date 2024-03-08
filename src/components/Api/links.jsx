@@ -1,1 +1,0 @@
-const productosLink = '"https://aurora-4aa23-default-rtdb.firebaseio.com/productos.json"';
