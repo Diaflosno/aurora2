@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavBar, Footer } from './components/design';
 import {Body} from './components/bodyDesign'
+import FormsFirebase from './pagina/formularioAuth';
+import { AuthProvider } from "./firebase/AuthContext";
 
 function App() {
   const [data, setData] = useState({});
@@ -26,19 +28,11 @@ function App() {
 
   return (
     <>
-    <div className="app container">
-      <div className="row">
-      <NavBar/>
-       </div>
-      <div className="row mt-4">
-        <div className="col-lg-6">
+    <AuthProvider>
+      <FormsFirebase />
+    </AuthProvider>
+
       <Body data={data}/>
-        </div>
-        <div className="col-lg-6 mt-4 mt-lg-0">
-      <Footer/>
-        </div>
-      </div>
-    </div>
     </>
   );
 }
