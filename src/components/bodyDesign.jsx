@@ -13,16 +13,18 @@ const images = Array.from({ length: 14 }, (_, i) => i + 1);
 function Body({data}) {
   console.log(data)
     return(
-        <div className="App">
-          <div className="image-grid">
-            {images.map(image => (
-              <ImageCard
-                key={image}
-                image={`https://via.placeholder.com/150/${image}`}
-                title={`Titulo de la imagen ${image}`}
-                description={`Descripcion breve de la imagen ${image}`}
-              />
-            ))}
+      <div className="App">
+      <div className="image-grid">
+        {data.map((item, index) =>
+          item !== null ? (
+            <ImageCard
+              key={item.id}
+              image={item.image}
+              title={item.title}
+              description={item.description}
+            />
+          ) : null
+        )}
           </div>
         </div>
       );
