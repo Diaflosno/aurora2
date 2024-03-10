@@ -3,6 +3,7 @@ import axios from 'axios';
 import { NavBar, Footer } from './components/design';
 import FormsFirebase from './pagina/formularioAuth';
 import { AuthProvider } from "./firebase/AuthContext";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function App() {
   const [data, setData] = useState({});
@@ -22,17 +23,26 @@ function App() {
   }, []);
 
   if (loading) {
-    return <div>Cargando...  <div className="spinner-border" role="status">ola</div></div>
-    ;
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <ClipLoader size={50} color="#000" loading={loading} />
+      </div>
+
+    );
   }
 
   return (
     <>
-    <NavBar/>
-      <AuthProvider>
+    <div className="bg-image">
+    <div className="container home-container">
+        <AuthProvider>
       <FormsFirebase  data={data} />
-    </AuthProvider> 
+    </AuthProvider>
+    </div>
+ 
       <Footer/>
+      </div>
+
     </>
   );
 

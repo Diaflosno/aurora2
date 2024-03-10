@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "../firebase/AuthContext";
 import { Body } from "../components/bodyDesign";
+import { NavBar } from "../components/design";
+import Home from "../components/home";
 
 function FormsFirebase( {data} ){
 
@@ -18,19 +20,16 @@ function FormsFirebase( {data} ){
     };
     return (
         <>
+            <NavBar handleGoogle={handleGoogle} handleLogout={handleLogout} />
             {displayName ? (
                 <>
                 <Body data={data}/>
                 <button onClick={handleLogout}>Cerrar sesión</button>
                 </>
             ) : (
-                <>
-                <div className="bodydiv">
-                <h1>LOGIN</h1>
-                <h2>Bienvenido {displayName}</h2>
-                <button onClick={handleGoogle}>Iniciar sesión con Google</button>
-                </div>
-                </>
+
+                <Home />
+
             )}
         </>
     );

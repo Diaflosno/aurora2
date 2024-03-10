@@ -30,6 +30,3 @@ function Body({data}) {
 
 }
     export {Body} 
-
-/*     <h1>Color: {data.nuevo ? data.nuevo.Color: 'Color not available'}</h1>
- */
