@@ -6,7 +6,6 @@ import FormsFirebase from './pagina/formularioAuth';
 import { AuthProvider } from "./firebase/AuthContext";
 
 function App() {
-  const [user] =""
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 

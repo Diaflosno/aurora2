@@ -5,7 +5,7 @@
 .navtitle{
     color:aliceblue;
 
-    font-size: xxx-large;
+    font-size:xxx-large;
 }
 
 .image-grid {
@@ -28,3 +28,5 @@
   margin: 0 1rem;
   text-decoration: none;
  }
+ .navbar {
+  height: 13%;}

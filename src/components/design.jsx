@@ -7,14 +7,15 @@ function NavBar() {
       <div>
       <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top justify-content-center">
   <div >
-    <h6 className="navtitle"> AuroraShop</h6>
+    <h6 className="navtitle fas fa-star "> AuroraShop</h6>
   </div>
 </nav>
 <nav className="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
   <div >
-    <h6 className="navtitle">
-      TheFqnBest tienda
-    </h6>
+  <h0> s</h0>
+    <h3 className="navbar navtitle fas fa-star">
+      EasterEgg
+    </h3>
   </div>
 </nav>
 </div>
@@ -24,25 +25,18 @@ function NavBar() {
 
 function Footer() {
   return (
-    <footer className="bg-body-tertiary text-center text-lg-start ">
+    <footer className=" text-center text-lg-start bg-dark">
       <div className="container p-4">
-        <div className="row">
-          <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5>Redes sociales:</h5>
-            <a href="https://www.instagram.com/auroramusic/" target="_blank" className="icon-link"><i className="fab fa-instagram fa-2x"></i></a>
-            <a href="https://www.facebook.com/iamAURORA" target="_blank" className="icon-link"><i className="fab fa-facebook-f fa-2x"></i></a>
-            <a href="https://open.spotify.com/intl-es/artist/1WgXqy2Dd70QQOU7Ay074N" target="_blank" className="icon-link"><i className="fab fa-spotify fa-2x"></i></a>
+     
+          <div className=" text-center">
+            <a href="https://www.instagram.com/auroramusic/" target="_blank" className="icon-link"><i className="fab fa-instagram fa-3x"></i></a>
+            <a href="https://www.facebook.com/iamAURORA" target="_blank" className="icon-link"><i className="fab fa-facebook-f fa-3x"></i></a>
+            <a href="https://open.spotify.com/intl-es/artist/1WgXqy2Dd70QQOU7Ay074N" target="_blank" className="icon-link"><i className="fab fa-spotify fa-3x"></i></a>
           </div>
-          <div className="col-lg-6 col-md-12 mb-4 mb-md-0">  
-            <p>
-              when
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        Jose Moreno - Alfonso Peñuelas
+      </div>
+      <div className="text-center p-3 bg-dark" >
+        <h3 style={{ color: 'aliceblue' }}  >Sigue a <strong>Aurora</strong> en sus redes sociales</h3>
       </div>
     </footer>
   )

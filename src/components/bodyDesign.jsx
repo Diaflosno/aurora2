@@ -11,6 +11,7 @@ const ImageCard = ({ image, title, description }) => (
 const images = Array.from({ length: 14 }, (_, i) => i + 1);
 
 function Body({data}) {
+  console.log(data)
     return(
         <div className="App">
           <div className="image-grid">
