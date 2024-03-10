@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavBar, Footer } from './components/design';
-import FormsFirebase from './pagina/formularioAuth';
+import FormsFirebase from './components/formularioAuth';
 import { AuthProvider } from "./firebase/AuthContext";
 import ClipLoader from "react-spinners/ClipLoader";
 

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "../firebase/AuthContext";
-import { Body } from "../components/bodyDesign";
-import { NavBar } from "../components/design";
-import Home from "../components/home";
+import { Body } from "./bodyDesign";
+import { NavBar } from "./design";
+import Home from "./home";
 
 function FormsFirebase( {data} ){
 
@@ -24,7 +24,6 @@ function FormsFirebase( {data} ){
             {displayName ? (
                 <>
                 <Body data={data}/>
-                <button onClick={handleLogout}>Cerrar sesión</button>
                 </>
             ) : (
 
