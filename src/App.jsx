@@ -9,7 +9,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://aurora-4aa23-default-rtdb.firebaseio.com/productos.json")
+    axios.get("https://aurora-4aa23-default-rtdb.firebaseio.com/items.json")
         .then((response) => {
             setData(response.data);
         })
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <NavBar/>
+    <NavBar/>
       <AuthProvider>
       <FormsFirebase  data={data} />
     </AuthProvider> 
