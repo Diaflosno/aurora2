@@ -8,10 +8,8 @@ const ImageCard = ({ image, title, description }) => (
     <p>{description}</p>
   </div>
 );
-const images = Array.from({ length: 14 }, (_, i) => i + 1);
 
 function Body({data}) {
-  console.log(data)
     return(
       <div className="bodydiv">
       <div className="image-grid">
