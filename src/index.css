@@ -1,0 +1,30 @@
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+  }
+.navtitle{
+    color:aliceblue;
+
+    font-size: xxx-large;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.image-card {
+  padding: 10px;
+  text-align: center;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+}
+.icon-link {
+  margin: 0 1rem;
+  text-decoration: none;
+ }

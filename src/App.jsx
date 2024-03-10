@@ -6,6 +6,7 @@ import FormsFirebase from './pagina/formularioAuth';
 import { AuthProvider } from "./firebase/AuthContext";
 
 function App() {
+  const [user] =""
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -23,18 +24,21 @@ function App() {
   }, []);
 
   if (loading) {
-    return <p>Cargando...</p>;
+    return <div>Cargando...  <div className="spinner-border" role="status">ola</div></div>
+    ;
   }
 
   return (
     <>
-    <AuthProvider>
+      <NavBar/>
+      <AuthProvider>
       <FormsFirebase />
-    </AuthProvider>
-
+    </AuthProvider> 
       <Body data={data}/>
+      <Footer/>
     </>
   );
+
 }
 
 export default App;
