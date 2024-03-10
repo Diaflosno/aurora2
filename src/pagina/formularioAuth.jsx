@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useAuth } from "../firebase/AuthContext";
+import { Body } from "../components/bodyDesign";
 
-function FormsFirebase(){
+function FormsFirebase( {data} ){
 
     const auth = useAuth();
 
@@ -17,10 +18,18 @@ function FormsFirebase(){
     };
     return (
         <>
-            <h1>LOGIN</h1>
-            {displayName && <h2>Bienvenido {displayName}</h2>}
-            <button onClick={handleGoogle}>Iniciar sesión con Google</button>
-            <button onClick={handleLogout}>Cerrar sesión</button>
+            {displayName ? (
+                <>
+                <Body data={data}/>
+                <button onClick={handleLogout}>Cerrar sesión</button>
+                </>
+            ) : (
+                <>
+                <h1>LOGIN</h1>
+                <h2>Bienvenido {displayName}</h2>
+                <button onClick={handleGoogle}>Iniciar sesión con Google</button>
+                </>
+            )}
         </>
     );
 }

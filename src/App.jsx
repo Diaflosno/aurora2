@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { NavBar, Footer } from './components/design';
-import {Body} from './components/bodyDesign'
 import FormsFirebase from './pagina/formularioAuth';
 import { AuthProvider } from "./firebase/AuthContext";
 
@@ -31,9 +30,8 @@ function App() {
     <>
       <NavBar/>
       <AuthProvider>
-      <FormsFirebase />
+      <FormsFirebase  data={data} />
     </AuthProvider> 
-      <Body data={data}/>
       <Footer/>
     </>
   );
