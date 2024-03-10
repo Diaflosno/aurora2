@@ -11,7 +11,7 @@ const ImageCard = ({ image, title, description }) => (
 
 function Body({data}) {
     return(
-      <div className="bodydiv">
+      <div className="bodydiv container">
       <div className="image-grid">
         {data.map((item, index) =>
           item !== null ? (

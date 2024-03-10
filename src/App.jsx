@@ -34,7 +34,7 @@ function App() {
   return (
     <>
     <div className="bg-image">
-    <div className="container home-container">
+    <div className="container">
         <AuthProvider>
       <FormsFirebase  data={data} />
     </AuthProvider>
