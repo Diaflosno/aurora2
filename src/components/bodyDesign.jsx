@@ -13,7 +13,7 @@ const images = Array.from({ length: 14 }, (_, i) => i + 1);
 function Body({data}) {
   console.log(data)
     return(
-      <div className="App">
+      <div className="bodydiv">
       <div className="image-grid">
         {data.map((item, index) =>
           item !== null ? (

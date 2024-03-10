@@ -25,9 +25,11 @@ function FormsFirebase( {data} ){
                 </>
             ) : (
                 <>
+                <div className="bodydiv">
                 <h1>LOGIN</h1>
                 <h2>Bienvenido {displayName}</h2>
                 <button onClick={handleGoogle}>Iniciar sesión con Google</button>
+                </div>
                 </>
             )}
         </>
