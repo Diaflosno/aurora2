@@ -37,7 +37,7 @@ function ConseguirFav () {
     }
 
 
-    const ImageCardFavorite = ({ image, title, description }) => {
+    const ImageCardFavorite = ({ image, title, description, id }) => {
         const { user } = useAuth();
         const uid = user.uid;
         const [etiqueta, setEtiqueta] = useState('');
@@ -45,7 +45,7 @@ function ConseguirFav () {
         const EliminarFavorito = () => {
             // Obtener el usuario actual
             // Hacer el post a la base de datos de realtime database
-            fetch(`https://aurora-4aa23-default-rtdb.firebaseio.com/favoritos/${uid}.json`, {
+            fetch(`https://aurora-4aa23-default-rtdb.firebaseio.com/favoritos/${uid}/${id}.json`, {
               method: 'DELETE',
               body: JSON.stringify({ image, title, description }),
               headers: {
@@ -142,6 +142,7 @@ function ConseguirFav () {
                                 image={datau[key].image}
                                 title={datau[key].title}
                                 description={datau[key].description}
+                                id={key}
                             />
                         </div>
                     ))}
