@@ -85,25 +85,20 @@ function ConseguirFav () {
 
         return (
           <div>
-            <div className="image-card"
-            
-            >
+            <div className="image-card">
             <div
           className={`image-wrapper ${hover ? 'hover' : ''}`}
           style={{ border: '3px solid black', borderRadius: '10px' }}
-            
             >
                 <img src={image} alt={title} />
               </div>
             </div>
-            <div className="image-card"
-            
-            >
+            <div className="image-card">
               <h2 className="tittlecard">{title}</h2>
               <p className="descriptcard">{description}</p>
               <p className="descriptcard">{etiqueta}</p>
 
-            <div className="botones container">
+            <div className="botones contener">
               
                <input type="text" value={etiqueta} onChange={(e) => setEtiqueta(e.target.value)} />
                <button className="btn btn-primary" onClick={() => MeterEtiqueta(etiqueta)}>
