@@ -27,11 +27,7 @@ function NavBar({ handleGoogle, handleLogout }) {
                         </li>
                     ) : (
                         <>
-                            <li className="nav-item">
-                                <a className="navsesion" href="">
-                                    Favoritos
-                                </a>
-                            </li>
+
                             <li className="nav-item">
                                 <a className="navsesion" href="" onClick={handleLogout}>
                                     <FaSignOutAlt /> Cerrar sesion
