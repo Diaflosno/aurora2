@@ -33,15 +33,10 @@ function App() {
 
   return (
     <>
-    <div className="bg-image">
-    <div className="container">
         <AuthProvider>
       <FormsFirebase  data={data} />
     </AuthProvider>
-    </div>
- 
       <Footer/>
-      </div>
 
     </>
   );

@@ -23,12 +23,18 @@ function FormsFirebase( {data} ){
             <NavBar handleGoogle={handleGoogle} handleLogout={handleLogout} />
             {displayName ? (
                 <>
+                <div className="bg-image2">
+                <div className="container">
                 <Body data={data}/>
+                </div>
+                </div>
                 </>
             ) : (
-
+                <div className="bg-image">
+                <div className="container">
                 <Home />
-
+            </div>
+            </div>
             )}
         </>
     );
