@@ -1,9 +1,10 @@
 import React from 'react'
 import App from '../App.jsx'
 import { useAuth } from "../firebase/AuthContext";
+import ConseguirFav from './favoritos.jsx'
 
 
-const ImageCard = ({ image, title, description, agregarFavorito }) => {
+const ImageCard = ({ image, title, description }) => {
   const [hover, setHover] = React.useState(false);
 const { user } = useAuth();
   const uid = user.uid;
@@ -19,11 +20,9 @@ const { user } = useAuth();
     })
       .then(response => response.json())
       .then(data => {
-        // Aquí puedes manejar la respuesta del servidor si es necesario
         console.log('Post exitoso:', data);
       })
       .catch(error => {
-        // Aquí puedes manejar el error si ocurre
         console.error('Error al hacer el post:', error);
       });
   };
@@ -53,6 +52,8 @@ const { user } = useAuth();
   );
 };
 
+
+
 const ImageWrapper = ({ children, hover }) => (
   <div className="image-wrapper-inner">
     {children}
@@ -64,6 +65,7 @@ ImageCard.Wrapper = ImageWrapper;
 
 function Body({ data }) {
   return (
+    <>
     <div className="bodydiv container">
       <div className="image-grid">
         {data.map((item, index) =>
@@ -78,7 +80,14 @@ function Body({ data }) {
         )}
       </div>
     </div>
+    <div>
+      <ConseguirFav />
+    </div>
+    </>
   );
 }
 
 export { Body }
+
+
+
