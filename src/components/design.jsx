@@ -16,8 +16,14 @@ function NavBar({ handleGoogle, handleLogout }) {
                     {!user ? (
                         <li className="nav-item">
                             <a className="navsesion" href="" onClick={handleGoogle}>
-                                <FaSignInAlt /> Iniciar sesion
-                            </a>
+                
+                <span className="navsesion">Iniciar sesión</span>
+                <img
+                  src="https://www.svgrepo.com/show/271163/google.svg"
+                  alt="Iniciar sesión con Google"
+                  className="boton-google"
+                />
+              </a>
                         </li>
                     ) : (
                         <>

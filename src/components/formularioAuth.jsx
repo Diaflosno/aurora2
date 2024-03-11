@@ -68,7 +68,7 @@ function FormsFirebase( {data} ){
             ) : (
                 <div className="bg-image">
                 <div className="container">
-                <Home />
+                <Home handleGoogle={handleGoogle} />
             </div>
             </div>
             )}

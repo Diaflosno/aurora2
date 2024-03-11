@@ -1,14 +1,17 @@
 import React from 'react';
 
-const Home = () => {
+const Home = ({ handleGoogle }) => {
   return (
     <div className="home">
-        <p>
-            ola
-            ola
-            ola
-            ola
-        </p>
+     {/*  <div className="recuadro-inicio-sesion">
+        <p className="texto-inicio-sesion">Inicia sesión</p>
+        <img
+          src="https://www.svgrepo.com/show/271163/google.svg"
+          alt="Iniciar sesión con Google"
+          className="boton-google"
+          onClick={handleGoogle}
+        />
+      </div> */}
     </div>
   );
 };

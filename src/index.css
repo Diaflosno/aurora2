@@ -63,8 +63,9 @@ body {
 }
 
 .bg-image {
-  background-image: url(/src/assets/aurorafondo.jpeg);
-  opacity: 1; /* Ajusta el valor de opacidad aquí */
+  background-image: url(https://preview.redd.it/molatlcdv3571.jpg?width=1920&format=pjpg&auto=webp&s=92e2470250744a862a78f03aa1304699e18cd87e);
+/*   background-image: url(/src/assets/aurorafondo.jpeg);
+ */  opacity: 1; /* Ajusta el valor de opacidad aquí */
   background-size:100%;
  
 }
@@ -77,9 +78,7 @@ body {
 }
 
 
-.home{
-  padding-top: 4rem;
-}
+
 .image-wrapper {
   position: relative;
   overflow: hidden;
@@ -134,4 +133,21 @@ body {
   background-color: rgba(255, 255, 255, 0.212);
   border-radius: 5px;
 
+}
+
+.home {
+  background-image: url('https://images.unsplash.com/photo-1503676260822-c4d8d4c23e4e');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-google {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin-right: 0px;
+  vertical-align: middle;
 }
