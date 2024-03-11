@@ -151,3 +151,9 @@ body {
   margin-right: 0px;
   vertical-align: middle;
 }
+
+.botones {
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}

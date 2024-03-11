@@ -8,7 +8,8 @@ function ConseguirFav () {
     const [loading, setLoading] = useState(true);
     const { user } = useAuth();
   const uid = user.uid;
-  
+  const [hover, setHover] = React.useState(false);
+
     useEffect(() => {
         console.log("uid",uid)
       axios.get(`https://aurora-4aa23-default-rtdb.firebaseio.com/favoritos/${uid}.json`)
@@ -84,24 +85,36 @@ function ConseguirFav () {
 
         return (
           <div>
-            <div className="image-card">
-              <div style={{ border: '3px solid black', borderRadius: '10px' }}>
+            <div className="image-card"
+            
+            >
+            <div
+          className={`image-wrapper ${hover ? 'hover' : ''}`}
+          style={{ border: '3px solid black', borderRadius: '10px' }}
+            
+            >
                 <img src={image} alt={title} />
               </div>
             </div>
-            <div className="image-card">
+            <div className="image-card"
+            
+            >
               <h2 className="tittlecard">{title}</h2>
               <p className="descriptcard">{description}</p>
               <p className="descriptcard">{etiqueta}</p>
-              <button className="btn btn-danger" onClick={EliminarFavorito}>
-          Eliminar de favoritos
-        </button>
-        <input type="text" value={etiqueta} onChange={(e) => setEtiqueta(e.target.value)} />
-        <button className="btn btn-primary" onClick={() => MeterEtiqueta(etiqueta)}>
-          Agregar etiqueta
-        </button>
-            </div>
-          </div>
+
+            <div className="botones container">
+              
+               <input type="text" value={etiqueta} onChange={(e) => setEtiqueta(e.target.value)} />
+               <button className="btn btn-primary" onClick={() => MeterEtiqueta(etiqueta)}>
+                   Agregar etiqueta
+               </button>
+               <button className="btn btn-danger" onClick={EliminarFavorito}>
+                 Eliminar de favoritos
+              </button>
+               </div>
+              </div>
+               </div>
         );
       }
 
@@ -111,7 +124,8 @@ function ConseguirFav () {
     return (
         <>
             <div className="bodydiv container">
-            <div className="image-grid">
+            <div className="image-card"
+            >
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -120,7 +134,8 @@ function ConseguirFav () {
                 </div>
                 <div className="row">
                     {Object.keys(datau).map((key) => (
-                        <div className="col-12 col-md-4" key={key}>
+                        <div className="col-12 col-md-4" key={key}
+                        >
                             <ImageCardFavorite
                                 image={datau[key].image}
                                 title={datau[key].title}
