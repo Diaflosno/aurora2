@@ -114,7 +114,14 @@ function ConseguirFav () {
       }
 
     if (!datau) {
-        return <div>No hay nada en favoritos</div>
+        return (
+        
+        <div className="contenedor descriptcard notice">
+          <div>
+          No hay nada en favoritos
+          </div>
+          <h5>Recarga la pagina</h5>
+          </div>)
     }
     return (
         <>

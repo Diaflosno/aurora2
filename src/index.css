@@ -160,3 +160,13 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.notice{
+
+  border: '3px solid black';
+  border-radius: '10px';
+  margin-top: 5%;
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 2rem;
+}
