@@ -9,6 +9,7 @@ function conseguirFav () {
     const [loading, setLoading] = useState(true);
     const { user } = useAuth();
   const uid = user.uid;
+// ENSEÑANDO GIT
   
     useEffect(() => {
         console.log("uid",uid)

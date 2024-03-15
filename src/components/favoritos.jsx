@@ -65,7 +65,7 @@ function ConseguirFav () {
           const MeterEtiqueta = (etiqueta) => {
             // Obtener el usuario actual
             // Hacer el post a la base de datos de realtime database
-            fetch(`https://aurora-4aa23-default-rtdb.firebaseio.com/favoritos/${uid}.json`, {
+            fetch(`https://aurora-4aa23-default-rtdb.firebaseio.com/favoritos/${uid}/${id}.json`, {
               method: 'PATCH',
               body: JSON.stringify({ image, title, description, etiqueta }),
               headers: {
@@ -142,6 +142,7 @@ function ConseguirFav () {
                                 image={datau[key].image}
                                 title={datau[key].title}
                                 description={datau[key].description}
+                                etiqueta={datau[key].etiqueta}
                                 id={key}
                             />
                         </div>
